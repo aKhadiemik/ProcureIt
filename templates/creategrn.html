@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Supplier Directory</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1" />
+<link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+    <!--Begin Header-->
+    <div id="header">
+        <!-- Begin Title Column -->
+        <div id="header-right"><h1>Create GRN</h1>
+        </div>
+    </div>
+    <!--Begin Page Menu-->
+    <div id="pagemenu">
+        <!-- Begin Left Title Column -->
+        <div id="pagemenu-right">
+            <a href="{% url 'list_vendors' %}" class="active">Supplier Directory</a>
+            <a href="{% url 'get_purchaseorders' %}">View Purchase Orders</a>
+            <a href="{% url 'get_grns' %}">View GRNs</a>
+        </div> 
+    </div>
+    <!--Begin Content-->
+    <div id="content">
+        <!-- Begin Content Menu Column -->
+        <div id="content-left">
+        </div>
+        <!-- Begin Content Column, Should be a form -->
+        <div id="content-right">
+            <form action="{% url 'create_grn' %}" method="post">
+                {% csrf_token %}
+                <label class="form-label">GRN Number:</label><br>
+                <input class="form-input" name="grnnumber" value="{{ grn.grnnumber }}">
+                <br><br>
+                <label class="form-label", type="date">Delivery Note Date:</label><br>
+                <input class="form-input" name="grndate" value="{{ grn.grndate}}">
+                <br><br>
+                <label class="form-label">Supplier Invoice Number:</label><br>
+                <input class="form-input" name="supplierinvoicenumber" value="{{ grn.supplierinvoicenumber}}">
+                <br><br>
+                <label class="form-label">Delivery Note Number:</label><br>
+                <input class="form-input" name="deliverynotenumber" value="{{ grn.deliverynotenumber}}">
+                <br><br>
+                <label class="form-label">Ordered Quantity:</label><br>
+                <input class="form-input" name="orderedqty" value="{{ grn.orderedqty}}">
+                <br><br>
+                <label class="form-label">Received Quantity:</label><br>
+                <input class="form-input" name="receivedqty" value="{{ grn.receivedqty}}">
+                <br><br>
+                <label class="form-label">Purchase Order:</label><br>
+                <input class="form-input" name="poid_id" value="{{ grn.poid_id}}">
+                <br><br>
+                <label class="form-label">Received By:</label><br>
+                <input class="form-input" name="receivedby" value="{{ grn.receivedby}}">
+                <br><br>
+                <label class="form-label">Status:</label><br>
+                <input class="form-input" name="status" value="{{ grn.status}}">
+                <br><br>
+                <input class="form-submit" type="submit" value="Create Goods Received Note">
+            </form>
+        </div>
+    </div>
+    <!-- Begin Footer -->
+    <div id="footer">
+        <div id="footer-data">
+        <br />&#169; Copyright {{ year }}
+        Bletchley Technosys. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

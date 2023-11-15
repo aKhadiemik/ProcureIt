@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Goods Receioved Note</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1" />
+<link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+    <!--Begin Header-->
+    <div id="header">
+        <!-- Begin Title Column -->
+        <div id="header-right"><h1>Get GRN</h1>
+        </div>
+    </div>
+    <!--Begin Page Menu-->
+    <div id="pagemenu">
+        <!-- Begin Left Title Column -->
+        <div id="pagemenu-right">
+            <a href="{% url 'list_vendors' %}" class="active">Supplier Directory</a>
+            <a href="{% url 'get_purchaseorders' %}">View Purchase Orders</a>
+            <a href="{% url 'get_grns' %}">View GRNs</a>
+        </div> 
+    </div>
+    <!--Begin Content-->
+    <div id="content">
+        <!-- Begin Content Menu Column -->
+        <div id="content-left">
+        </div>
+        <!-- Begin Content Column, Should be a form -->
+        <div id="content-right">
+            <table>
+                <thead>
+                    <th>GRN Number</th><th>Date Created</th><th>PO ID</th><th>Delivery Note Number</th><th>Status</th>
+                    <th>Received By</th><th></th><th></th><th></th>
+                </thead>
+                <tbody>
+                {% for grn in grns %}
+                    <tr>
+                        <td>{{ grn.grnnumber}}</td>
+                        <td>{{ grn.grndate }}</td>
+                        <td>{{ grn.poid_id }}</td>
+                        <td>{{ grn.deliverynotenumber }}</td>
+                        <td>{{ grn.status }}</td>
+                        <td>{{ grn.receivedby }}</td>
+                        <td><a href="{% url 'grnitems' id=grn.grnid %}"><button>View</button></a></td>
+                        <td><a href="{% url 'update_grn' id=grn.grnid %}"><button>Edit</button></aa></td>
+                        <td><button>Delete</button></td>
+                    </tr>               
+                <br/>
+                {%endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Begin Footer -->
+    <div id="footer">
+        <div id="footer-data">
+        <br />&#169; Copyright {{ year }}
+        Bletchley Technosys. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

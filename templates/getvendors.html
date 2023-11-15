@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Supplier Directory</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1" />
+<link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+    <!--Begin Header-->
+    <div id="header">
+        <!-- Begin Title Column -->
+        <div id="header-right"><h1>Vendors</h1>
+        </div>
+    </div>
+    <!--Begin Page Menu-->
+    <div id="pagemenu">
+        <!-- Begin Left Title Column -->
+        <div id="pagemenu-right">
+            <a href="{% url 'list_vendors' %}" class="active">Supplier Directory</a>
+            <a href="{% url 'get_purchaseorders' %}">View Purchase Orders</a>
+            <a href="{% url 'get_grns' %}">View GRNs</a>
+            <a href="{% url 'create_purchaseorder' %}">Create Purchase Order</a>
+            <a href="{% url 'create_grn' %}">Create GRN</a>
+        </div> 
+    </div>
+    <!--Begin Content-->
+    <div id="content">
+        <!-- Begin Content Menu Column -->
+        <div id="content-left">
+        </div>
+        <!-- Begin Content Column -->
+        <div id="content-right">
+            <table>
+                <thead>
+                    <th>Vendor</th><th>Contact</th><th>Contact Phone</th><th>Contact Email</th>
+                    <th></th><th></th><th></th>
+                </thead>
+                <tbody>
+                {% for vendor in vendors %}
+                    <tr>
+                        <td>{{ vendor.vendor_name}}</td>
+                        <td>{{ vendor.contact_name }}</td>
+                        <td>{{ vendor.contact_phone }}</td>
+                        <td>{{ vendor.contact_email }}</td>
+                        <td><button>Edit</button></td>
+                        <td><button>Deactivate</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>               
+                <br/>
+                {%endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Begin Footer -->
+    <div id="footer">
+        <div id="footer-data">
+        <br />&#169; Copyright {{ year }}
+        Bletchley Technosys. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

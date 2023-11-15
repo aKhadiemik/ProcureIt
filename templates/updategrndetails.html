@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update GRN {{ grn.grnnumber }}</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1" />
+<link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+    <!--Begin Header-->
+    <div id="header">
+        <!-- Begin Title Column -->
+        <div id="header-right"><h1>Update GRN</h1>
+        </div>
+    </div>
+    <!--Begin Page Menu-->
+    <div id="pagemenu">
+        <!-- Begin Left Title Column -->
+        <div id="pagemenu-right">
+            <a href="{% url 'list_vendors' %}" class="active">Supplier Directory</a>
+            <a href="{% url 'get_purchaseorders' %}">View Purchase Orders</a>
+            <a href="{% url 'get_grns' %}">View GRNs</a>
+        </div> 
+    </div>
+    <!--Begin Content-->
+    <div id="content">
+        <!-- Begin Content Menu Column -->
+        <div id="content-left">
+        </div>
+        <!-- Begin Content Column, Should be a form -->
+        <div id="content-right">
+            {{ grn.grnnumber}}
+            {{ grn.poid_id }}
+            <form action="{{ grn_details.grnid }}" method="post">
+            {% csrf_token %}
+            <label class="form-label">Delivery Note Number:</label><br>
+            <input class="form-input" name="dn_number" value="{{ grn_details.deliverynotenumber }}">
+            <br><br>
+            <label class="form-label">Supplier Invoice Number:</label><br>
+            <input class="form-input" name="supp_invoice_no" value="{{ grn_details.supplierinvoicenumber}}">
+            <br><br>
+            <label class="form-label">Date Received:</label><br>
+            <input class="form-input" name="supp_invoice_no" value="{{ grn_details.grndate}}">
+            <br><br>
+            <input class="form-submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <!-- Begin Footer -->
+    <div id="footer">
+        <div id="footer-data">
+        <br />&#169; Copyright {{ year }}
+        Bletchley Technosys. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

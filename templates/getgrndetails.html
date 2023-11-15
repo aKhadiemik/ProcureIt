@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>GRN Details</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1" />
+<link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+    <!--Begin Header-->
+    <div id="header">
+        <!-- Begin Title Column -->
+        <div id="header-right"><h1>GRN Details</h1>
+        </div>
+    </div>
+    <!--Begin Page Menu-->
+    <div id="pagemenu">
+        <!-- Begin Left Title Column -->
+        <div id="pagemenu-right">
+            <a href="{% url 'list_vendors' %}" class="active">Supplier Directory</a>
+            <a href="{% url 'get_purchaseorders' %}">View Purchase Orders</a>
+            <a href="{% url 'get_grns' %}">View GRNs</a>
+        </div> 
+    </div>
+    <!--Begin Content-->
+    <div id="content">
+        <!-- Begin Content Menu Column -->
+        <div id="content-left">
+        </div>
+        <!-- Begin Content Column -->
+        <div id="content-right">
+            <table>
+                <thead>
+                    <th>Item</th><th>Ordered Quantity</th><th>Received Quantity</th><th>Unit Price</th>
+                    <th>Total Price</th><th></th><th></th>
+                </thead>
+                <tbody>
+                {% for grn_detail in grn_details %}
+                    <tr>
+                        <td>{{ grn_detail.item_name}}</td>
+                        <td>{{ grn_detail.orderedqty }}</td>
+                        <td>{{ grn_detail.receivedqty }}</td>
+                        <td>{{ grn_detail.unit_price }}</td>
+                        <td>{{ grn_detail.total_price }}</td>
+                        <td><button>Update</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>               
+                <br/>
+                {%endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Begin Footer -->
+    <div id="footer">
+        <div id="footer-data">
+        <br />&#169; Copyright {{ year }}
+        Bletchley Technosys. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

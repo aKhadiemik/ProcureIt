@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>PO Details</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1" />
+<link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+    <!--Begin Header-->
+        <!-- Begin Title Column -->
+        <div id="header-right"><h1>Purchase Order Details</h1>
+        </div>
+    </div>
+    <!--Begin Page Menu-->
+    <div id="pagemenu">
+        <!-- Begin Left Title Column -->
+        <div id="pagemenu-right">
+            <a href="{% url 'list_vendors' %}" class="active">Supplier Directory</a>
+            <a href="{% url 'get_purchaseorders' %}">View Purchase Orders</a>
+            <a href="{% url 'get_grns' %}">View GRNs</a>
+        </div> 
+    </div>
+    <!--Begin Content-->
+    <div id="content">
+        <!-- Begin Content Column -->
+        <div id="content-right">
+            <table>
+                <thead>
+                    <th>Item Name</th><th>Quantity</th><th>Unit Price</th><th>Total Price</th>
+                    <th></th><th></th>
+                </thead>
+                <tbody>
+                    {% for po_detail in po_details %}
+                    <tr>
+                        <td>{{ po_detail.item_name}}</td>
+                        <td>{{ po_detail.quantity}}</td>
+                        <td>{{ po_detail.unit_price}}</td>
+                        <td>{{ po_detail.total_price}}</td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>               
+                <br/>
+                {%endfor %}
+                </tbody>
+            </table>
+            <br>
+            {% for detail in po_details %}
+            <a href="{% url 'add_poitem' id=detail.purchase_order_id %}"><button class="form-submit">Add Item</button></a>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Begin Footer -->
+    <div id="footer">
+        <div id="footer-data">
+        <br />&#169; Copyright {{ year }}
+        Bletchley Technosys. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
