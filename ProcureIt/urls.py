@@ -20,7 +20,7 @@ from ProcureIt.views import hello
 from ProcureIt_0_0_1.views import *
 
 urlpatterns = [
-    path('', hello), # change to default page for app
+    path('', get_vendors), # change to default page for app
     path('admin/', admin.site.urls),
     path('hello/', hello),
     path('list_vendors/', get_vendors, name='list_vendors'),
