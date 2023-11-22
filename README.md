@@ -3,7 +3,7 @@
 ProcureIt is a procurement management application designed to simplify and streamline the procurement process for organizations. It enables efficient management of purchase requests, approvals, and vendor interactions.
 
 ## Intro
-A demo of the app can be seen [here] (https://youtu.be/ta3saQrKdZ4), this can also be accessed from the [project's landing page] (https://akhadiemik.github.io/). [This blog] (https://medium.com/@coagengo/the-journey-to-create-an-intuitive-application-for-procurement-workflows-5d147896b711) contains a brief writeup of the project. Connect with the author on [LinkedIn] (https://www.linkedin.com/in/agengootieno/).
+A demo of the app can be seen [here](https://youtu.be/ta3saQrKdZ4), this can also be accessed from the [project's landing page](https://akhadiemik.github.io/). [This blog](https://medium.com/@coagengo/the-journey-to-create-an-intuitive-application-for-procurement-workflows-5d147896b711) contains a brief writeup of the project. Connect with the author on [LinkedIn](https://www.linkedin.com/in/agengootieno/).
 
 ## Team
 
