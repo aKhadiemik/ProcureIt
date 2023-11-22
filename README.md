@@ -8,15 +8,15 @@ ProcureIt is a procurement management application designed to simplify and strea
 
 ## Roles
 
-- **Software Architect (Carlos Ageng`o):** Oversees the overall development process, handles project documentation, and leads backend and frontend development, ensuring an intuitive user experience.
+- **Software Architect (Carlos Ageng`o):** Role - oversee the overall development process, handle project documentation, leads backend & frontend development, ensure an intuitive user experience.
   
-- **User Interface and User Experience Design (Carlos Ageng`o):** Designs user interfaces for simplicity and visual appeal.
+- **User Interface and User Experience Design (Carlos Ageng`o):** Design user interfaces for simplicity and visual appeal.
 
 ## Technologies
 
 ### Backend
 
-- Python (Flask framework)
+- Python (Django framework)
 - MySQL database
 
 ### Frontend
@@ -32,7 +32,7 @@ ProcureIt is a procurement management application designed to simplify and strea
 
 ## Alternative Technology Choices
 
-1. **Backend:** Django instead of Flask. Flask was chosen for its flexibility, aligning better with the project's simplicity and specific requirements.
+1. **Backend:** Django instead of Flask. Django  chosen for its extensibility, aligning better with the project's specific requirements.
 
 2. **Database:** Contemplated using PostgreSQL as an alternative to MySQL. MySQL was chosen for its widespread adoption, robust performance, and compatibility with Python libraries.
 
@@ -72,19 +72,19 @@ ProcureIt is designed to be locale-independent, ensuring usability across differ
 
 ### Version Control
 
-We will use the Github flow branching model for our repository, maintaining separate branches for features, releases, and hotfixes. Pull requests will be used for code review.
+Github flow branching model employed for this repository, maintaining separate branches for features, releases, and hotfixes. Pull requests used for code review.
 
 ### Deployment
 
-The application will be deployed on a cloud platform like AWS or Heroku. Continuous integration and deployment (CI/CD) pipelines will be set up for automated deployment.
+The application built to be deployed either on-premise or over PaaS's platforms like AWS or Heroku. Continuous integration and deployment (CI/CD) pipelines set up for automated deployment.
 
 ### Data Population
 
-Initially, we will provide sample data for testing purposes. For production, users will input their own procurement data through the application.
+Sample data used for testing purposes. For production, users will input their own procurement data through the application.
 
 ### Testing
 
-We will use automated testing frameworks like PyTest for backend testing and Jest for frontend testing. Continuous integration will ensure that tests are run with every code push.
+Automated testing frameworks like PyTest uused for backend testing and Jest for frontend testing. Continuous integration to ensure that tests are run with every code push.
 
 ## Existing Solutions
 
@@ -108,12 +108,6 @@ We will use automated testing frameworks like PyTest for backend testing and Jes
 4. `POST /api/goods_received_notes`: Creates a new Goods Received Note.
 5. `GET /api/goods_received_notes`: Retrieves a list of Goods Received Notes.
 6. `GET /api/goods_received_notes/{id}`: Retrieves details of a specific Goods Received Note.
-
-#### Data Model
-
-[Insert Entity Relationship Diagram (ERD)]
-
-[Details of Tables and Relationships]
 
 ### User Stories
 
