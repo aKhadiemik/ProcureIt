@@ -138,7 +138,7 @@ Existing solutions above could be viewed as related projects. The team is howeve
 
 - C. Ageng`o
 
-## Inspiratin for Project
+## Inspiration for Project
 
 Having implemented ERP systems for clients in the past gave me an appreciation of the Procurement process within different organizations. The place of procurement in operations include ensuring that customer service levels are fulfilled and maintained at a high quality through:
 
@@ -147,7 +147,7 @@ Having implemented ERP systems for clients in the past gave me an appreciation o
 
 In order to achieve this, it is necessary that sufficient budgetary allocations be made for what is to be procured. This requires that approvals be provided at specific points of the procurement workflow. User departments also have to conform to certain procedures.
 
-In working with users when implementing procurement solutions in the past, the one critical pain-point expressed was the fact that they would like a good balance between functionality and user friendliness. This was an inspiration for this project.
+The project's goal is to address one critical pain-point expressed by users. Provide a user friendly app that delivers reliable functionality to support the procurement process.
 
 ## Licensing
 
