@@ -2,9 +2,12 @@
 
 ProcureIt is a procurement management application designed to simplify and streamline the procurement process for organizations. It enables efficient management of purchase requests, approvals, and vendor interactions.
 
+## Intro
+A demo of the app can be seen [here] (https://youtu.be/ta3saQrKdZ4), this can also be accessed from the [project's landing page] (https://akhadiemik.github.io/). [This blog] (https://medium.com/@coagengo/the-journey-to-create-an-intuitive-application-for-procurement-workflows-5d147896b711) contains a brief writeup of the project. Connect with the author on [LinkedIn] (https://www.linkedin.com/in/agengootieno/).
+
 ## Team
 
-- Carlos Ageng`o – Software Architect and Full Stack Developer, UI/UX Designer
+- C. Ageng`o – Software Architect and Full Stack Developer, UI/UX Designer
 
 ## Roles
 
@@ -78,6 +81,16 @@ Github flow branching model employed for this repository, maintaining separate b
 
 The application built to be deployed either on-premise or over PaaS's platforms like AWS or Heroku. Continuous integration and deployment (CI/CD) pipelines set up for automated deployment.
 
+### Requirements for Installation
+
+The required packages for successful installation of the app are provided on the requirements.txt file. You will also need a web server - we recommend Nginx, for app server - gunicorn is recommended and for database server - MySQL. The app can be modified to work with any database server, however, you will require Python packages that allow for connection to those specific database servers.
+
+In order for the application to work as desired ensure that the settings.py file is edited to work with the specific packages that you install.
+
+### Usage
+
+A great part of the paths to use the app is captured under User Stories here. You can create Supplier/Vendor Accounts, Create and Populate Purchase Orders, Create and Populate GRNs. The latter have to be linked to a specific Purchase Order.
+
 ### Data Population
 
 Sample data used for testing purposes. For production, users will input their own procurement data through the application.
@@ -91,6 +104,10 @@ Automated testing frameworks like PyTest uused for backend testing and Jest for 
 - **SAP Ariba:** A comprehensive procurement management solution. ProcureIt aims to provide a simpler, more streamlined alternative, focusing on essential features for smaller organizations.
 
 - **Coupa:** Another robust procurement platform. ProcureIt distinguishes itself by offering a more intuitive and user-friendly experience, catering to organizations that prefer simplicity over complexity.
+
+## Related projects
+
+Existing solutions above could be viewed as related projects. The team is however not responsible for any projects that are related to this. There are several applications in the market for Procurement management, the ones listed above do not exhaust the extent to which such apps are used in different organizations. 
 
 ## MVP Specification
 
@@ -116,3 +133,11 @@ Automated testing frameworks like PyTest uused for backend testing and Jest for 
 4. As a user, I want to create a Goods Received Note for a purchase order, including providing Delivery Note Numbers and Supplier Invoice Numbers.
 
 5. As a user, I want to finalize a Goods Received Note and commit it to stock, marking the associated purchase order as completed.
+
+## Contributors
+
+- C. Ageng`o
+
+## Licensing
+
+MIT License
