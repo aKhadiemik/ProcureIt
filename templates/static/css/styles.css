@@ -132,13 +132,13 @@ body {
     margin-top: 0;
   }
 
-  /*#content-left {
+  #content-left {
     float: left;
     width: 20%;
-  }*/
+  }
   
   #content-right {
-    float: centre;
+    float: right;
     width: 80%;
     margin-top: 0;
   }
