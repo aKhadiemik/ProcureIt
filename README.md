@@ -94,10 +94,6 @@ Automated testing frameworks like PyTest uused for backend testing and Jest for 
 
 ## MVP Specification
 
-### Architecture
-
-[Insert Architecture Diagram]
-
 ### API and Methods
 
 #### API Routes (Web Client to Server)
